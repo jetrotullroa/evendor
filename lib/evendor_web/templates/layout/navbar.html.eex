@@ -2,7 +2,8 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">eVendor</a>
+  <%= link "eVendor", to: page_path(@conn, :index), class: "navbar-brand" %>
+  <!-- <a class="navbar-brand" href="#">eVendor</a> -->
   <!-- <form class="form-inline">
     <input class="form-control mr-sm-2" type="text" placeholder="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -15,6 +16,15 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Store</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <%= link "Fruits", to: category_path(@conn, :show, "fruits"), class: "dropdown-item" %>
+          <%= link "Vegetables", to: category_path(@conn, :show, "vegetables"), class: "dropdown-item" %>
+        </div>
       </li>
     </ul>
     <ul class="navbar-nav navbar-right">
