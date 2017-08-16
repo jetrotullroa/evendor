@@ -21,11 +21,11 @@ defmodule EvendorWeb.HomepageTest do
 
     # And I expect apple on the product displayed
     product = find_element(:css, ".product")
-    product_name = find_within_element(product, :css, ".product-name")
-    product_price = find_within_element(product, :css, ".product-price")
+    product_name = find_within_element(product, :css, ".product-name") |> visible_text()
+    product_price = find_within_element(product, :css, ".product-price") |> visible_text()
 
-    assert product_name = "Apple"
-    assert product_price = 100
+    assert product_name == "Apple"
+    assert product_price == "100"
 
     # And I expect tomato not present on the product diplayed
     refute page_source() =~ "Tomato"
