@@ -4,16 +4,19 @@ use Mix.Config
 # you can enable the server option below.
 config :evendor, EvendorWeb.Endpoint,
   http: [port: 4001],
-  server: false
+  server: true
 
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+# Use PhnatomJS Browser for testing
+config :hound, driver: "phantomjs"
+
 # Configure your database
 config :evendor, Evendor.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "jetrotullroa",
+  password: "",
   database: "evendor_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
