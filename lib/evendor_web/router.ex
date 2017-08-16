@@ -17,6 +17,7 @@ defmodule EvendorWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/categories/:name", CategoryController, :show
   end
 
   # Other scopes may use custom stacks.

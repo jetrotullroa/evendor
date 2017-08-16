@@ -17,4 +17,10 @@ defmodule Evendor.CatalogTest do
     assert p1.name == "Apple"
   end
 
+  test "get_category_products/1 returns the products of the given category" do
+    [product = %Product{}] = Catalog.get_category_products("fruits")
+
+    assert product.name == "Apple"
+  end
+
 end
