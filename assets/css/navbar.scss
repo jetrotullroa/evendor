@@ -1,0 +1,37 @@
+nav {
+  background-color: #32CD32;
+
+  a {
+    color: #123321;
+  }
+
+  a:hover {
+    color: #F8F8F8;
+    cursor: pointer;
+  }
+
+  a.dropdown-item:hover {
+    background-color: #12FF12;
+  }
+
+  .navbar-btn {
+    background-color: #F8F8F8;
+    border: #777777 solid 1px;
+    color: #11AA11;
+  }
+
+  .navbar-toggler {
+    background-color: #F8F8F8;
+    border: #777777 solid 1px;
+
+    .navbar-toggler-icon {
+      background-color: #11AA11;
+      border: #777777 solid 1px;
+    }
+  }
+
+  .navbar-brand {
+    font-style: oblique;
+    font-weight: 600;
+  }
+}

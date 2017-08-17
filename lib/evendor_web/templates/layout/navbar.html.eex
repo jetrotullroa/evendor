@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<nav class="navbar navbar-toggleable-md">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,13 +12,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link text-center" href="#">About</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item text-center">
         <a class="nav-link" href="#">Store</a>
       </li>
       <li class="dropdown">
-        <a href="#" class="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-secondary navbar-btn dropdown-toggle btn-block" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Categories
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -30,11 +30,11 @@
     <ul class="navbar-nav navbar-right">
       <li class="divider"><hr></li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Register</a>
+        <a class="nav-link text-center" href="#">Register</a>
         <!-- <span class="sr-only">(current)</span> -->
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link text-center" href="#">Login</a>
       </li>
     </ul>
   </div>

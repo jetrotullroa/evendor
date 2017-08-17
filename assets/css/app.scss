@@ -2,4 +2,22 @@
 
 @import "font-awesome";
 @import "bootstrap";
-@import "custom";
+@import "navbar";
+@import "catalog";
+
+
+// GENERICS
+
+html, body {
+
+  .content {
+    padding: 1rem auto;
+
+    .page-title {
+      color: #11AA11;
+      margin: 0 auto;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
