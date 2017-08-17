@@ -1,11 +1,11 @@
 defmodule Evendor.Catalog do
 
   alias Evendor.Catalog.Product
+  alias Evendor.Repo
 
   def list_products do
-    p1 = %Product{name: "Tomato", price: 20, is_seasonal: false, category: "vegetables"}
-    p2 = %Product{name: "Apple", price: 100, is_seasonal: true, category: "fruits"}
-    [p1, p2]
+    Product
+    |> Repo.all
   end
 
   def list_seasonal_products do
