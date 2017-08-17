@@ -11,13 +11,15 @@
 html, body {
 
   .content {
-    padding: 1rem auto;
+    margin: 1rem auto;
 
     .page-title {
       color: #11AA11;
-      margin: 0 auto;
+      margin: 1rem auto;
       position: relative;
       width: 100%;
+      border-bottom: 3px solid #777777;
+      display: inline;
     }
   }
 }

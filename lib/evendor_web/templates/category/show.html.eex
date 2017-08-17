@@ -1,7 +1,10 @@
-<h3 class="page-title"><%= title_case @name %></h3>
-  <%= for product <- @products do %>
-    <ul class="product">
-      <li class="product-name"><%= product.name %></li>
-      <li class="product-price"><%= product.price %></li>
-    </ul>
-  <% end %>
+<div class="content">
+  <h3 class="page-title text-center"><%= title_case @name %></h3>
+  <div class="row">
+    <%= for product <- @products do %>
+    <div class="col-md-3">
+      <%= render EvendorWeb.ProductView, "product_card.html", product: product %>
+    </div>
+    <% end %>
+  </div>
+</div>
