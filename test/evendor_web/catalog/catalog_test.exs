@@ -1,8 +1,15 @@
 defmodule Evendor.CatalogTest do
 
-  use ExUnit.Case
-  alias Evendor.Catalog
+  use Evendor.DataCase
+  alias Evendor.{Catalog, Repo}
   alias Evendor.Catalog.Product
+
+
+  setup do
+    Repo.insert %Product{ name: "Tomato", price: 20, sku: "A123", is_seasonal: false, category: "vegetables"}
+    Repo.insert %Product{ name: "Apple", price: 100, sku: "Z321", is_seasonal: true, category: "fruits"}
+    :ok
+  end
 
   test "list_products/0 returns all products" do
     [p1 = %Product{}, p2 = %Product{}] = Catalog.list_products
