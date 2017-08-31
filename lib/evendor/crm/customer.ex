@@ -21,4 +21,5 @@ defmodule Evendor.CRM.Customer do
     |> validate_required([:name, :email, :phone, :residence_area, :password_hash])
     |> unique_constraint(:email)
   end
+  
 end
