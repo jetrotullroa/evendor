@@ -1,0 +1,31 @@
+.form-style {
+  width: 720px;
+  margin: 0 auto;
+  position: relative;
+
+  .form-buttons {
+    button {
+      background: #225522;
+      border: 1px solid #32CD32;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background: #32CD32;
+      border: 1px solid #225522;
+      color: #292B2C;
+      font-weight: bold;
+    }
+  }
+
+  span.help-block {
+    color: #990100;
+    float: right;
+    clear: both;
+  }
+
+  #form-error > p {
+    margin: 0 auto;
+    position: relative;
+  }
+}
