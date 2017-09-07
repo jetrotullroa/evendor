@@ -12,17 +12,20 @@ defmodule EvendorWeb.UserRegistrationTest do
 
     form = find_element(:id, "registration-form")
 
-    find_within_element(form, :name, "registration[:name]")
+    find_within_element(form, :name, "registration[name]")
     |> fill_field("John Doe")
 
-    find_within_element(form, :name, "registration[:email]")
+    find_within_element(form, :name, "registration[email]")
     |> fill_field("johndoe@example.com")
 
-    find_within_element(form, :name, "registration[:residence_area]")
-    |> fill_field("Area 1")
+    find_element(:css, "#registration_residence_area option[value='Area 1']")
+    |> click
 
-    find_within_element(form, :name, "registration[:phone]")
+    find_within_element(form, :name, "registration[phone]")
     |> fill_field("1111")
+
+    find_within_element(form, :name, "registration[password]")
+    |> fill_field("password")
 
     find_within_element(form, :tag, "button")
     |> click
@@ -30,7 +33,7 @@ defmodule EvendorWeb.UserRegistrationTest do
     assert current_path() == "/"
     message = find_element(:class, "alert") |> visible_text()
 
-    assert message == "Registration Successful"
+    assert message == "Registration Successful!"
   end
 
   test "shows error on invalid data" do
@@ -43,7 +46,7 @@ defmodule EvendorWeb.UserRegistrationTest do
     assert current_path() == "/register"
     message = find_element(:class, "alert") |> visible_text()
 
-    assert message == "Oops, something went wrong! Please check the errors below"
+    assert message == "Oops, something went wrong! Please check the errors below."
 
   end
 
