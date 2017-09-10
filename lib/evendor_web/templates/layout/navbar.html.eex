@@ -30,10 +30,10 @@
     <ul class="navbar-nav navbar-right">
       <li class="divider"><hr></li>
       <li class="nav-item text-center">
-        <%= link "Register", to: registration_path(@conn, :new), class: "nav-link" %>
+        <%= link "Register", to: user_registration_path(@conn, :new), class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-center" href="#">Login</a>
+        <%= link "Login", to: user_session_path(@conn, :new), class: "nav-link" %>
       </li>
     </ul>
   </div>

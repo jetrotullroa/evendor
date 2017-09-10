@@ -19,9 +19,13 @@ defmodule EvendorWeb.Router do
     get "/", PageController, :index
     get "/categories/:name", CategoryController, :show
 
-    # URSER AUTH
-    get "/register", RegistrationController, :new
-    post "/register", RegistrationController, :create
+    # USER REGISTER
+    get "/register", UserRegistrationController, :new
+    post "/register", UserRegistrationController, :create
+
+    #USER SESSION
+    get "/login", UserSessionController, :new
+    post "/login", UserSessionController, :create
   end
 
   # Other scopes may use custom stacks.

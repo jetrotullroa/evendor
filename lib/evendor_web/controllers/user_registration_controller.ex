@@ -1,4 +1,4 @@
-defmodule EvendorWeb.RegistrationController do
+defmodule EvendorWeb.UserRegistrationController do
   use EvendorWeb, :controller
   alias Evendor.CRM
 
